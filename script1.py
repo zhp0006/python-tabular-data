@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 def get_all_species():
-    species_list = dataframe.species.alltypes()
+    species_list = dfObj.species.array()
     return species_list
 def get_regression_plot():
     """ make scatterplots of  petal length vs sepal length
@@ -30,7 +30,7 @@ def get_regression_plot():
         plt.close()
         n += 1
 if __name__ == '__main__':
-    dataframe = pd.read_csv("iris.csv")
+    dfObj = pd.read_csv("iris.csv")
     species_list = all_species()
     print("Regression plot for" + all_species)
     get_regression_plot()
